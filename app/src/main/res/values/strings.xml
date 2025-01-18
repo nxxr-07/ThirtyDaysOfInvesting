@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">ThirtyDaysOfInvesting</string>
+
+    <!-- Tips Strings -->
+    <string name="day1_title">Set Clear Financial Goals</string>
+    <string name="day1_desc">Define why you\'re investing (retirement, buying a house, education, etc.) to guide your strategy.</string>
+
+    <string name="day2_title">Build an Emergency Fund First</string>
+    <string name="day2_desc">Before investing, save 3–6 months\' worth of expenses for unexpected events.</string>
+
+    <string name="day3_title">Understand Your Risk Tolerance</string>
+    <string name="day3_desc">Assess how much risk you’re comfortable taking based on your age, income, and goals.</string>
+
+    <string name="day4_title">Learn the Power of Compounding</string>
+    <string name="day4_desc">Reinvesting earnings grows your investment exponentially over time.</string>
+
+    <string name="day5_title">Start Small but Start Now</string>
+    <string name="day5_desc">It’s better to invest small amounts consistently than to wait for a large sum.</string>
+
+    <string name="day6_title">Avoid Emotional Decisions</string>
+    <string name="day6_desc">Market fluctuations are normal; stay focused on long-term goals.</string>
+
+    <string name="day7_title">Know the Difference Between Saving and Investing</string>
+    <string name="day7_desc">Savings are for short-term goals, while investments are for growing wealth over time.</string>
+
+    <!-- Week 2: Understanding Investment Options -->
+    <string name="day8_title">Explore Stocks</string>
+    <string name="day8_desc">Stocks offer ownership in companies and the potential for high returns, but they carry risk.</string>
+
+    <string name="day9_title">Understand Bonds</string>
+    <string name="day9_desc">Bonds are loans to governments or corporations, providing lower but steady returns.</string>
+
+    <string name="day10_title">Learn About Mutual Funds</string>
+    <string name="day10_desc">A pool of investments managed by professionals; great for diversification.</string>
+
+    <string name="day11_title">Dive Into Index Funds</string>
+    <string name="day11_desc">Low-cost funds that track market indices, ideal for beginners.</string>
+
+    <string name="day12_title">Consider ETFs (Exchange-Traded Funds)</string>
+    <string name="day12_desc">Like mutual funds but traded on stock exchanges, offering flexibility and low fees.</string>
+
+    <string name="day13_title">Discover REITs (Real Estate Investment Trusts)</string>
+    <string name="day13_desc">Invest in real estate without owning property, offering dividends and diversification.</string>
+
+    <string name="day14_title">Don\'t Overlook Fixed Deposits</string>
+    <string name="day14_desc">Low-risk investments suitable for risk-averse individuals.</string>
+
+    <!-- Week 3: Strategies and Planning -->
+    <string name="day15_title">Diversify Your Portfolio</string>
+    <string name="day15_desc">Spread investments across assets to minimize risk.</string>
+
+    <string name="day16_title">Use Dollar-Cost Averaging</string>
+    <string name="day16_desc">Invest a fixed amount regularly to avoid timing the market.</string>
+
+    <string name="day17_title">Avoid Trying to Time the Market</string>
+    <string name="day17_desc">Even experts struggle to predict market movements; focus on long-term growth.</string>
+
+    <string name="day18_title">Rebalance Your Portfolio Annually</string>
+    <string name="day18_desc">Adjust your investments periodically to maintain your desired risk level.</string>
+
+    <string name="day19_title">Focus on Low-Cost Investments</string>
+    <string name="day19_desc">High fees can eat into your returns; choose low-cost funds and ETFs.</string>
+
+    <string name="day20_title">Understand Tax Implications</string>
+    <string name="day20_desc">Learn how taxes affect returns and use tax-saving instruments wisely.</string>
+
+    <string name="day21_title">Have a Retirement Plan</string>
+    <string name="day21_desc">Start contributing to retirement accounts like 401(k) or IRAs early for maximum benefits.</string>
+
+    <!-- Week 4: Advanced Tips and Habits -->
+    <string name="day22_title">Monitor Your Investments Regularly</string>
+    <string name="day22_desc">Keep track of your portfolio\'s performance but avoid overreacting to short-term changes.</string>
+
+    <string name="day23_title">Learn to Read Financial Statements</string>
+    <string name="day23_desc">Analyze a company\'s income, balance sheet, and cash flow before investing.</string>
+
+    <string name="day24_title">Be Wary of High-Yield Schemes</string>
+    <string name="day24_desc">If it sounds too good to be true, it probably is; avoid scams.</string>
+
+    <string name="day25_title">Leverage Technology</string>
+    <string name="day25_desc">Use apps and tools for budgeting, tracking, and investing effectively.</string>
+
+    <string name="day26_title">Stay Informed but Avoid Noise</string>
+    <string name="day26_desc">Follow credible sources and avoid getting overwhelmed by every market update.</string>
+
+    <string name="day27_title">Invest in Yourself</string>
+    <string name="day27_desc">Enhance your financial knowledge through courses, books, or podcasts.</string>
+
+    <string name="day28_title">Align Investments with Personal Values</string>
+    <string name="day28_desc">Consider ethical investing, like ESG (Environmental, Social, Governance) funds.</string>
+
+    <string name="day29_title">Know When to Sell</string>
+    <string name="day29_desc">Set clear exit strategies, whether for profit-taking or cutting losses.</string>
+
+    <string name="day30_title">Stay Patient and Consistent</string>
+    <string name="day30_desc">Wealth-building takes time; trust your process and avoid shortcuts.</string>
+</resources>
