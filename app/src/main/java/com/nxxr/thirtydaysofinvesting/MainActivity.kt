@@ -98,7 +98,6 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
     Card(
         modifier = Modifier
             .width(390.dp)
-            .background(primaryContainerDark)
             .padding(top = 32.dp, start = 16.dp, end = 16.dp, bottom = 32.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         shape = RoundedCornerShape(8.dp)
@@ -106,7 +105,6 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(backgroundLight)
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
             horizontalAlignment = Alignment.CenterHorizontally
@@ -130,7 +128,6 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
             Text(
                 text = "Day ${tip.dayCount}",
                 style = MaterialTheme.typography.bodyMedium,
-                color = onPrimaryDark,
                 modifier = Modifier.align(Alignment.Start)
             )
 
@@ -163,7 +160,6 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
                 Text(
                     text = stringResource(tip.title),
                     style = MaterialTheme.typography.displayLarge,
-                    color = onPrimaryDark,
                     textAlign = TextAlign.Start,
                     modifier = Modifier.weight(1f)
                         .wrapContentWidth(Alignment.Start),
@@ -179,7 +175,6 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
                    Icon(
                        imageVector = if (extended.value) Icons.Filled.Remove else Icons.Filled.Add,
                        contentDescription = null,
-                       tint = onPrimaryContainerLight,
                        modifier = Modifier.size(32.dp)
                    )
                }
