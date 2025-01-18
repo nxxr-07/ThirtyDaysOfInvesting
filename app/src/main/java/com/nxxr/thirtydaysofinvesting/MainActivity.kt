@@ -192,11 +192,12 @@ fun TipApp(modifier: Modifier = Modifier) {
 
     Scaffold (
         Modifier.fillMaxSize()
-    ){ it ->
+    ){  it ->
         LazyRow (
             modifier = Modifier
                 .fillMaxSize(),
             state = lazyListState,
+            contentPadding =  it,
             flingBehavior = rememberSnapFlingBehavior(lazyListState)
         ) {
             items(tips) {
