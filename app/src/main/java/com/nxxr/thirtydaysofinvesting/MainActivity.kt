@@ -42,34 +42,15 @@ import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentWidth
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Remove
-import androidx.compose.material3.CenterAlignedTopAppBar
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.style.TextOverflow
 import com.nxxr.thirtydaysofinvesting.ui.theme.AppTheme
-import com.nxxr.thirtydaysofinvesting.ui.theme.ColorFamily
-import com.nxxr.thirtydaysofinvesting.ui.theme.backgroundLight
-import com.nxxr.thirtydaysofinvesting.ui.theme.onPrimaryContainerLight
-import com.nxxr.thirtydaysofinvesting.ui.theme.onPrimaryDark
-import com.nxxr.thirtydaysofinvesting.ui.theme.onPrimaryLight
-import com.nxxr.thirtydaysofinvesting.ui.theme.onSecondaryDark
-import com.nxxr.thirtydaysofinvesting.ui.theme.primaryContainerDark
-import com.nxxr.thirtydaysofinvesting.ui.theme.primaryContainerLight
-import com.nxxr.thirtydaysofinvesting.ui.theme.primaryDark
-import com.nxxr.thirtydaysofinvesting.ui.theme.primaryLight
-import com.nxxr.thirtydaysofinvesting.ui.theme.secondaryDarkHighContrast
-import com.nxxr.thirtydaysofinvesting.ui.theme.secondaryLight
-import com.nxxr.thirtydaysofinvesting.ui.theme.surfaceDimDark
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -98,6 +79,7 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
     Card(
         modifier = Modifier
             .width(390.dp)
+            .background(MaterialTheme.colorScheme.secondaryContainer)
             .padding(top = 32.dp, start = 16.dp, end = 16.dp, bottom = 32.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         shape = RoundedCornerShape(8.dp)
@@ -127,6 +109,7 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
             // Day label
             Text(
                 text = "Day ${tip.dayCount}",
+                color = MaterialTheme.colorScheme.onPrimaryContainer,
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.align(Alignment.Start)
             )
@@ -145,6 +128,7 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
                 if (extended.value) {
                     Text(
                         text = stringResource(tip.description),
+                        color = MaterialTheme.colorScheme.onSecondaryContainer,
                         style = MaterialTheme.typography.bodyLarge,
                         textAlign = TextAlign.Justify,
                         modifier = Modifier.padding(top = 8.dp)  // Add padding to avoid text touching the top
@@ -159,6 +143,7 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
             ){
                 Text(
                     text = stringResource(tip.title),
+                    color = MaterialTheme.colorScheme.onPrimaryContainer,
                     style = MaterialTheme.typography.displayLarge,
                     textAlign = TextAlign.Start,
                     modifier = Modifier.weight(1f)
@@ -175,6 +160,7 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
                    Icon(
                        imageVector = if (extended.value) Icons.Filled.Remove else Icons.Filled.Add,
                        contentDescription = null,
+                       tint = MaterialTheme.colorScheme.onPrimaryContainer,
                        modifier = Modifier.size(32.dp)
                    )
                }
@@ -195,6 +181,7 @@ fun TipApp(modifier: Modifier = Modifier) {
     ){  it ->
         LazyRow (
             modifier = Modifier
+                .background(MaterialTheme.colorScheme.surface)
                 .fillMaxSize(),
             state = lazyListState,
             contentPadding =  it,
