@@ -50,6 +50,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Remove
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.sp
 import com.nxxr.thirtydaysofinvesting.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
@@ -79,10 +80,10 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
     Card(
         modifier = Modifier
             .width(390.dp)
-            .background(MaterialTheme.colorScheme.secondaryContainer)
-            .padding(top = 32.dp, start = 16.dp, end = 16.dp, bottom = 32.dp),
+            .background(MaterialTheme.colorScheme.background)
+            .padding(16.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
-        shape = RoundedCornerShape(8.dp)
+        shape = RoundedCornerShape(16.dp)
     ) {
         Column(
             modifier = Modifier
@@ -181,44 +182,54 @@ fun TipApp(modifier: Modifier = Modifier) {
     Scaffold (
         Modifier.fillMaxSize()
     ){  it ->
-        Box {
-            TipsTopBar()
-        }
-        LazyRow (
-            modifier = Modifier
-                .background(MaterialTheme.colorScheme.surface)
-                .fillMaxSize(),
-            state = lazyListState,
-            contentPadding =  it,
-            flingBehavior = rememberSnapFlingBehavior(lazyListState)
-        ) {
-            items(tips) {
-                TipCard(
-                    tip = it,
-                    modifier = Modifier
-                        .animateContentSize(
-                            animationSpec = spring(
-                                dampingRatio = Spring.DampingRatioMediumBouncy,
-                                stiffness = Spring.StiffnessMediumLow
+        Column (
+            modifier = Modifier.padding(it)
+        ){
+            TipsTopAppBar()
+
+            LazyRow (
+                modifier = Modifier
+                    .background(MaterialTheme.colorScheme.background)
+                    .fillMaxSize(),
+                state = lazyListState,
+                contentPadding =  it,
+                flingBehavior = rememberSnapFlingBehavior(lazyListState)
+            ) {
+                items(tips) {
+                    TipCard(
+                        tip = it,
+                        modifier = Modifier
+                            .animateContentSize(
+                                animationSpec = spring(
+                                    dampingRatio = Spring.DampingRatioMediumBouncy,
+                                    stiffness = Spring.StiffnessMediumLow
+                                )
                             )
-                        )
-                )
+                    )
+                }
             }
         }
+
     }
 }
 
+@Preview
 @Composable
-fun TipsTopBar(){
-    Row {
+fun TipsTopAppBar() {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.background)
+            .padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center
+    ) {
         Text(
-            text = stringResource(R.string.app_name)
-        )
-        Image(
-            painter = painterResource(R.drawable.ic_launcher_foreground),
-            contentScale = ContentScale.Crop,
-            contentDescription = null,
-            modifier = Modifier
+            text = stringResource(R.string.app_name),
+            color = MaterialTheme.colorScheme.onSecondaryContainer,
+            style = MaterialTheme.typography.displaySmall.copy(fontSize = 30.sp),
+            maxLines = 2,
+            modifier = Modifier.padding(top = 8.dp)
         )
     }
 }
