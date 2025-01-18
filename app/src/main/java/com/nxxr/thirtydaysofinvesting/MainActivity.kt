@@ -138,7 +138,8 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
 
             // Title and Expand Icon
             Row (
-                modifier = modifier.height(200.dp)
+                modifier = modifier
+                    .height(200.dp)
                     .width(370.dp)
             ){
                 Text(
@@ -146,7 +147,8 @@ fun TipCard(tip: Tip,modifier: Modifier = Modifier) {
                     color = MaterialTheme.colorScheme.onPrimaryContainer,
                     style = MaterialTheme.typography.displayLarge,
                     textAlign = TextAlign.Start,
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier
+                        .weight(1f)
                         .wrapContentWidth(Alignment.Start),
                     maxLines = 3,
                     overflow = TextOverflow.Ellipsis
@@ -179,6 +181,9 @@ fun TipApp(modifier: Modifier = Modifier) {
     Scaffold (
         Modifier.fillMaxSize()
     ){  it ->
+        Box {
+            TipsTopBar()
+        }
         LazyRow (
             modifier = Modifier
                 .background(MaterialTheme.colorScheme.surface)
@@ -202,6 +207,22 @@ fun TipApp(modifier: Modifier = Modifier) {
         }
     }
 }
+
+@Composable
+fun TipsTopBar(){
+    Row {
+        Text(
+            text = stringResource(R.string.app_name)
+        )
+        Image(
+            painter = painterResource(R.drawable.ic_launcher_foreground),
+            contentScale = ContentScale.Crop,
+            contentDescription = null,
+            modifier = Modifier
+        )
+    }
+}
+
 @Preview
 @Composable
 fun TipCardPreview(){
